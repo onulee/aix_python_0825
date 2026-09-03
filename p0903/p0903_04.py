@@ -38,16 +38,18 @@ while True:
     print("-"*30)
     choice = int(input("원하는 번호를 입력하세요.>> "))
     print()
+
+
     # 1.컴퓨터구매부분
     if choice == 1:
-        no = int(input("컴퓨터를 구매하시겠습니까?(구매:1,취소:0) "))
+        no = int(input(f"{product[choice-1]['p_name'] }를 구매하시겠습니까?(구매:1,취소:0) "))
         if no == 1:
-            print("컴퓨터 구매완료")
+            print(f"{product[choice-1]['p_name'] } 구매완료")
             # 계산후 결과
-            my_info['money'] -= product[0]['price']
+            my_info['money'] -= product[choice-1]['price']
             # my_info['money'] = my_info['money'] - product[0]['price']
 
-            my_info['bonusPoint'] += product[0]['bonusPoint']
+            my_info['bonusPoint'] += product[choice-1]['bonusPoint']
             print(f"m머니 : {my_info['money']:,}원")
             print(f"m보너스포인트 : {my_info['bonusPoint']:,}포인트")
         else:
@@ -64,6 +66,12 @@ while True:
             print(f"m보너스포인트 : {my_info['bonusPoint']:,}포인트")
         else:
             print("이전화면으로 이동합니다.") 
+    elif choice == 3:
+        pass
+
+
+
+
 
 
 # # 일반매개변수, 초기화매개변수
