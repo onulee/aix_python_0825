@@ -1,0 +1,8 @@
+print("[ 학생성적프로그램 ]")
+print("1. 성적입력")
+print("2. 성적출력")
+print("3. 성적수정")
+print("9. 성적파일저장")
+print("0. 프로그램종료")
+print("-"*60)
+choice = int(input("원하는 번호 입력 : "))
